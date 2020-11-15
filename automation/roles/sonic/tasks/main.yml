@@ -11,6 +11,7 @@
     - sudo config bgp remove neighbor 10.0.0.3
     - sudo config bgp remove neighbor 10.0.0.5
     - sudo config bgp remove neighbor 10.0.0.7
+    - sudo config save -y
 
 - name: Flush Handlers, best practice
   meta: flush_handlers
