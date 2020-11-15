@@ -6,5 +6,4 @@
 - hosts: switches
   become: true
   roles:
-  - frr
-  - snmp
+  - switches
