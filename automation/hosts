@@ -4,9 +4,9 @@
 #    using topology data
 
 [switches]
-leaf01 ansible_user=admin ansible_pass=YourPaSsWoRd
-leaf02 ansible_user=admin ansible_pass=YourPaSsWoRd
-spine01 ansible_user=admin ansible_pass=YourPaSsWoRd
+leaf01 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
+leaf02 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
+spine01 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
 
 [servers]
 server01
