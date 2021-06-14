@@ -13,3 +13,10 @@ node:
       eth1:
         ip: 10.0.20.20/24
         gw: 10.0.20.1
+  server03:
+    ports:
+      eth0:
+        dhcp:
+      eth1:
+        ip: 10.0.30.30/24
+        gw: 10.0.30.1

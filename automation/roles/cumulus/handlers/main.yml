@@ -1,9 +1,4 @@
 ---
-- name: restart snmp
-  service:
-    name: snmpd
-    state: restarted
-
 - name: reload networking
   command: "ifreload -a"
 
@@ -16,9 +11,3 @@
   service:
     name: frr
     state: reloaded
-
-- name: reload sonic config
-  shell: config reload -y
-
-- name: flush ebtables
-  shell: ebtables -F
