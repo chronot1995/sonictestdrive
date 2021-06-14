@@ -1,0 +1,14 @@
+- hosts: server03
+  become: true
+  roles:
+    - servers
+
+- hosts: sonicbonus
+  become: true
+  roles:
+    - sonic
+
+- hosts: cumulusswitches
+  become: true
+  roles:
+    - cumulus

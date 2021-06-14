@@ -1,14 +1,9 @@
 - hosts: servers
   become: true
   roles:
-  - servers
+    - servers
 
 - hosts: sonicswitches
   become: true
   roles:
-  - sonic
-
-- hosts: cumulusswitches
-  become: true
-  roles:
-  - cumulus
+    - sonic
