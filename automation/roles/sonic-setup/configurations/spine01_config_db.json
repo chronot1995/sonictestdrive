@@ -8,15 +8,6 @@
             "name": "leaf02",
             "nhopself": "0",
             "rrclient": "0"
-        },
-        "10.0.1.7": {
-            "asn": "65103",
-            "holdtime": "180",
-            "keepalive": "60",
-            "local_addr": "10.0.1.6",
-            "name": "leaf03",
-            "nhopself": "0",
-            "rrclient": "0"
         }
     },
     "CRM": {
