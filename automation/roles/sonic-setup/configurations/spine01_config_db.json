@@ -1,5 +1,23 @@
 {
     "BGP_NEIGHBOR": {
+        "10.0.1.5": {
+            "asn": "65102",
+            "holdtime": "180",
+            "keepalive": "60",
+            "local_addr": "10.0.1.4",
+            "name": "leaf02",
+            "nhopself": "0",
+            "rrclient": "0"
+        },
+        "10.0.1.7": {
+            "asn": "65103",
+            "holdtime": "180",
+            "keepalive": "60",
+            "local_addr": "10.0.1.6",
+            "name": "leaf03",
+            "nhopself": "0",
+            "rrclient": "0"
+        }
     },
     "CRM": {
         "Config": {
@@ -221,6 +239,8 @@
     "INTERFACE": {
         "Ethernet0": {},
         "Ethernet4": {},
+        "Ethernet0|10.0.1.4/31": {},
+        "Ethernet4|10.0.1.6/31": {}
     },
     "KDUMP": {
         "config": {
@@ -231,6 +251,7 @@
     },
     "LOOPBACK_INTERFACE": {
         "Loopback0": {},
+        "Loopback0|10.10.10.202/32": {}
     },
     "PORT": {
         "Ethernet0": {
