@@ -1,14 +1,5 @@
 {
     "BGP_NEIGHBOR": {
-        "10.0.1.5": {
-            "asn": "65102",
-            "holdtime": "180",
-            "keepalive": "60",
-            "local_addr": "10.0.1.4",
-            "name": "leaf02",
-            "nhopself": "0",
-            "rrclient": "0"
-        }
     },
     "CRM": {
         "Config": {
