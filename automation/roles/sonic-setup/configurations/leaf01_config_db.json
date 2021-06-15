@@ -1,23 +1,5 @@
 {
     "BGP_NEIGHBOR": {
-        "10.0.1.5": {
-            "asn": "65102",
-            "holdtime": "180",
-            "keepalive": "60",
-            "local_addr": "10.0.1.4",
-            "name": "leaf02",
-            "nhopself": "0",
-            "rrclient": "0"
-        },
-        "10.0.1.7": {
-            "asn": "65103",
-            "holdtime": "180",
-            "keepalive": "60",
-            "local_addr": "10.0.1.6",
-            "name": "leaf03",
-            "nhopself": "0",
-            "rrclient": "0"
-        }
     },
     "CRM": {
         "Config": {
@@ -74,11 +56,11 @@
     },
     "DEVICE_METADATA": {
         "localhost": {
-            "bgp_asn": "65200",
+            "bgp_asn": "65101",
             "buffer_model": "traditional",
             "default_bgp_status": "up",
             "default_pfcwd_status": "disable",
-            "hostname": "spine02",
+            "hostname": "leaf01",
             "hwsku": "Force10-S6000",
             "mac": "52:54:00:12:34:56",
             "platform": "x86_64-kvm_x86_64-r0",
@@ -238,9 +220,7 @@
     },
     "INTERFACE": {
         "Ethernet0": {},
-        "Ethernet4": {},
-        "Ethernet0|10.0.1.4/31": {},
-        "Ethernet4|10.0.1.6/31": {}
+        "Ethernet4": {}
     },
     "KDUMP": {
         "config": {
@@ -250,8 +230,7 @@
         }
     },
     "LOOPBACK_INTERFACE": {
-        "Loopback0": {},
-        "Loopback0|10.10.10.202/32": {}
+        "Loopback0": {}
     },
     "PORT": {
         "Ethernet0": {
