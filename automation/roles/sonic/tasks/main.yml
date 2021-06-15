@@ -20,6 +20,13 @@
     #    password_expire_max: 9999
     password: "$6$K/4TLDKmKbK2n$3q7ntb71hclIlr4wggRGp8l5YfIe2fSID98a3nLyxeH5Ple./mfGJL2B2d8JEPkCiQaF3p5Kr2LtcoeOAr/Gt."
 
+- name: Create an ssh directory if it does not exist
+  ansible.builtin.file:
+    path: /home/cumulus/.ssh
+    state: directory
+    owner: cumulus
+    group: cumulus
+
 - name: Download cumulus User Key
   get_url:
     url: http://192.168.200.1/authorized_keys
