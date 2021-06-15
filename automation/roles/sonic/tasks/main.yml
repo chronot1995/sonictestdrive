@@ -17,7 +17,7 @@
     name: cumulus
     comment: Cumulus User
     groups: sudo,docker,admin,redis
-    password_expire_max: 9999
+    #    password_expire_max: 9999
     password: "$6$K/4TLDKmKbK2n$3q7ntb71hclIlr4wggRGp8l5YfIe2fSID98a3nLyxeH5Ple./mfGJL2B2d8JEPkCiQaF3p5Kr2LtcoeOAr/Gt."
 
 - name: Download cumulus User Key
