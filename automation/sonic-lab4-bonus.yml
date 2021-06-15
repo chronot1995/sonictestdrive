@@ -7,7 +7,9 @@
   become: true
   roles:
     - sonic
+    - netq-sonic
 # - hosts: cumulusswitches
 #   become: true
 #   roles:
 #     - cumulus
+#     - netq-cumulus
