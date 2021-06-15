@@ -1,4 +1,4 @@
 - hosts: sonicswitches
   become: true
   roles:
-    - sonic
+    - sonic-setup
