@@ -3,7 +3,7 @@
   roles:
     - servers
 
-- hosts: sonicswitches
+- hosts: leaf01,leaf02
   become: true
   roles:
-    - sonic
+    - sonic-lab1
