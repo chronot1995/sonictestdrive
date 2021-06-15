@@ -1,9 +1,4 @@
-- hosts: servers
-  become: true
-  roles:
-    - servers
-
 - hosts: sonicswitches
   become: true
   roles:
-    - sonic
+    - sonic-lab3

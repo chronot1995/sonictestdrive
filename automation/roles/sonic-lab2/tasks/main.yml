@@ -1,17 +1,4 @@
 ---
-# - name: Sonic Cleanup Commands
-#   command: "{{ item }}"
-#   with_items:
-#     - sudo config interface ip remove Ethernet0 10.0.0.0/31
-#     - sudo config interface ip remove Ethernet4 10.0.0.2/31
-#     - sudo config interface ip remove Ethernet8 10.0.0.4/31
-#     - sudo config interface ip remove Ethernet12 10.0.0.6/31
-#     - sudo config bgp remove neighbor 10.0.0.1
-#     - sudo config bgp remove neighbor 10.0.0.3
-#     - sudo config bgp remove neighbor 10.0.0.5
-#     - sudo config bgp remove neighbor 10.0.0.7
-#     - sudo config save -y
-
 - name: Create cumulus user
   ansible.builtin.user:
     name: cumulus
