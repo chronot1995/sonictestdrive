@@ -250,8 +250,7 @@
         }
     },
     "LOOPBACK_INTERFACE": {
-        "Loopback0": {},
-        "Loopback0|10.10.10.202/32": {}
+        "Loopback0": {}
     },
     "PORT": {
         "Ethernet0": {
