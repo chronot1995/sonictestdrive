@@ -32,7 +32,8 @@
   get_url:
     url: http://192.168.200.1/authorized_keys
     dest: /home/cumulus/.ssh/authorized_keys
-    mode: "0440"
+    owner: cumulus
+    group: cumulus
 
 # - name: Restore config_db
 #   copy: src=./configurations/{{inventory_hostname}}_config_db.json dest=/etc/sonic/config_db.json
