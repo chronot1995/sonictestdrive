@@ -8,18 +8,19 @@
 #   roles:
 #     - netq-servers
 
-- hosts: sonicbonus
-  become: true
-  roles:
-    - sonic-lab4
-    - netq-sonic
+# - hosts: sonicbonus
+#   become: true
+#   roles:
+#     - sonic-lab4
+#     - netq-sonic
+
 # - hosts: sonicswitches
 #   become: true
 #   roles:
 #     - netq-sonic
 
-# - hosts: cumulusswitches
-#   become: true
-#   roles:
-#     - cumulus-lab4
+- hosts: cumulusswitches
+  become: true
+  roles:
+    - cumulus-lab4
 #     - netq-cumulus
