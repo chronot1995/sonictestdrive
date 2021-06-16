@@ -1,5 +1,14 @@
 {
     "BGP_NEIGHBOR": {
+        "172.16.255.255": {
+            "asn": "65554",
+            "holdtime": "9",
+            "keepalive": "3",
+            "local_addr": "172.16.255.254",
+            "name": "lastisp",
+            "nhopself": "0",
+            "rrclient": "0"
+        }
     },
     "CRM": {
         "Config": {
