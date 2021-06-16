@@ -7,8 +7,8 @@ iface swp1
     alias server03
     bridge-access 30
 
-auto swp54
-iface swp54
+auto swp2
+iface swp2
     address 10.0.1.7/31
     alias spine02
 
