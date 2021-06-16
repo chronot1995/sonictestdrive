@@ -220,7 +220,9 @@
     },
     "INTERFACE": {
         "Ethernet0": {},
-        "Ethernet4": {}
+        "Ethernet4": {},
+        "Ethernet8": {},
+        "Ethernet12": {}
     },
     "KDUMP": {
         "config": {
@@ -246,6 +248,22 @@
             "alias": "fortyGigE0/4",
             "index": "1",
             "lanes": "29,30,31,32",
+            "mtu": "9100",
+            "speed": "40000"
+        },
+        "Ethernet8": {
+            "admin_status": "up",
+            "alias": "fortyGigE0/8",
+            "index": "2",
+            "lanes": "33,34,35,36",
+            "mtu": "9100",
+            "speed": "40000"
+        },
+        "Ethernet12": {
+            "admin_status": "up",
+            "alias": "fortyGigE0/12",
+            "index": "3",
+            "lanes": "37,38,39,40",
             "mtu": "9100",
             "speed": "40000"
         }
