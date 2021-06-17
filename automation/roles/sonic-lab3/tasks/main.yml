@@ -26,8 +26,13 @@
   copy: src=./configurations/{{inventory_hostname}}_config_db.json dest=/etc/sonic/config_db.json
   notify: reload sonic config
 
-- name: Copy FRR config to BGP Container
-  shell: docker cp ./configurations/{{inventory_hostname}}_bgpd.conf bgp:/etc/frr/bgpd.conf
+- name: Copy FRR config to temp directory
+  ansible.builtin.copy:
+    src: configurations/{{inventory_hostname}}_bgpd.conf
+    dest: /var/tmp/bgpd.conf
+
+- name: Copy FRR config from temp to BGP Container
+  shell: docker cp /var/tmp/bgpd.conf bgp:/etc/frr/bgpd.conf
 
 - name: Restart the services in the BGP Container
   shell: docker kill --signal=HUP bgp
