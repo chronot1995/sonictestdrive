@@ -1,20 +1,11 @@
 {
     "BGP_NEIGHBOR": {
-        "10.0.1.5": {
-            "asn": "65102",
+        "10.0.1.0": {
+            "asn": "65199",
             "holdtime": "180",
             "keepalive": "60",
-            "local_addr": "10.0.1.4",
-            "name": "leaf02",
-            "nhopself": "0",
-            "rrclient": "0"
-        },
-        "10.0.1.7": {
-            "asn": "65103",
-            "holdtime": "180",
-            "keepalive": "60",
-            "local_addr": "10.0.1.6",
-            "name": "leaf03",
+            "local_addr": "10.0.1.1",
+            "name": "spine01",
             "nhopself": "0",
             "rrclient": "0"
         }
@@ -74,11 +65,11 @@
     },
     "DEVICE_METADATA": {
         "localhost": {
-            "bgp_asn": "65200",
+            "bgp_asn": "65101",
             "buffer_model": "traditional",
             "default_bgp_status": "up",
             "default_pfcwd_status": "disable",
-            "hostname": "spine02",
+            "hostname": "leaf01",
             "hwsku": "Force10-S6000",
             "mac": "52:54:00:12:34:56",
             "platform": "x86_64-kvm_x86_64-r0",
@@ -238,9 +229,10 @@
     },
     "INTERFACE": {
         "Ethernet0": {},
+        "Ethernet12": {},
         "Ethernet4": {},
-        "Ethernet0|10.0.1.4/31": {},
-        "Ethernet4|10.0.1.6/31": {}
+        "Ethernet8": {},
+        "Ethernet12|10.0.1.1/31": {}
     },
     "KDUMP": {
         "config": {
@@ -267,6 +259,22 @@
             "alias": "fortyGigE0/4",
             "index": "1",
             "lanes": "29,30,31,32",
+            "mtu": "9100",
+            "speed": "40000"
+        },
+        "Ethernet8": {
+            "admin_status": "up",
+            "alias": "fortyGigE0/8",
+            "index": "2",
+            "lanes": "33,34,35,36",
+            "mtu": "9100",
+            "speed": "40000"
+        },
+        "Ethernet12": {
+            "admin_status": "up",
+            "alias": "fortyGigE0/12",
+            "index": "3",
+            "lanes": "37,38,39,40",
             "mtu": "9100",
             "speed": "40000"
         }
