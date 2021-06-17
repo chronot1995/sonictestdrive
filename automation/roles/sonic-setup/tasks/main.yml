@@ -37,7 +37,7 @@
 
 - name: Restore config_db
   copy: src=./configurations/{{inventory_hostname}}_config_db.json dest=/etc/sonic/config_db.json
-#  notify: reload sonic config
+  notify: reload sonic config
 
 # - name: Set eth[1-9] MTU to 9238
 #   shell: |
