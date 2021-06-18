@@ -40,6 +40,9 @@
 - name: Restart the services in the BGP Container
   shell: docker kill --signal=HUP bgp
 
+- name: Clear all the BGP Sessions
+  shell: vtysh -c "clear ip bgp *"
+
 # - name: Set eth[1-9] MTU to 9238
 #   shell: |
 #     for i in $(ip link | grep eth[1-9] | awk -F':' '{print $2}'); do
