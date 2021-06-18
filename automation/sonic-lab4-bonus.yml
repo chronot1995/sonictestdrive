@@ -9,9 +9,9 @@
 #     - netq-servers
 
 - hosts: sonicbonus,leaf02
-   become: true
-   roles:
-     - sonic-lab4
+  become: true
+  roles:
+    - sonic-lab4
 #     - netq-sonic
 
 # - hosts: sonicswitches
