@@ -310,7 +310,7 @@
         "Vlan20|10.0.20.1/24": {}
     },
     "VLAN_MEMBER": {
-        "Vlan10|Ethernet0": {
+        "Vlan20|Ethernet0": {
             "tagging_mode": "untagged"
         }
     }
