@@ -293,5 +293,19 @@
         "DATABASE": {
             "VERSION": "version_2_0_0"
         }
+    },
+    "VLAN": {
+        "Vlan10": {
+            "vlanid": "10"
+        }
+    },
+    "VLAN_INTERFACE": {
+        "Vlan10": {},
+        "Vlan10|10.0.10.1/24": {}
+    },
+    "VLAN_MEMBER": {
+        "Vlan10|Ethernet0": {
+            "tagging_mode": "untagged"
+        }
     }
 }

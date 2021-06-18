@@ -5,7 +5,7 @@
             "holdtime": "180",
             "keepalive": "60",
             "local_addr": "10.0.1.3",
-            "name": "leaf02",
+            "name": "spine01",
             "nhopself": "0",
             "rrclient": "0"
         }
@@ -301,6 +301,20 @@
     "VERSIONS": {
         "DATABASE": {
             "VERSION": "version_2_0_0"
+        }
+    },
+    "VLAN": {
+        "Vlan20": {
+            "vlanid": "20"
+        }
+    },
+    "VLAN_INTERFACE": {
+        "Vlan20": {},
+        "Vlan20|10.0.20.1/24": {}
+    },
+    "VLAN_MEMBER": {
+        "Vlan20|Ethernet0": {
+            "tagging_mode": "untagged"
         }
     }
 }
