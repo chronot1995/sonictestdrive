@@ -26,6 +26,9 @@
   copy: src=./configurations/{{inventory_hostname}}_config_db-lab3.json dest=/etc/sonic/config_db.json
   notify: reload sonic config
 
+- name: Flush Handlers, best practice
+  meta: flush_handlers
+
 - name: Copy FRR config to temp directory
   ansible.builtin.copy:
     src: configurations/{{inventory_hostname}}_bgpd-lab3.conf
