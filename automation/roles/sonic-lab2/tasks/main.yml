@@ -26,6 +26,10 @@
   copy: src=configurations/{{inventory_hostname}}_config_db-lab2.json dest=/etc/sonic/config_db.json
   notify: reload sonic config
 
+- name: Pause for 20 seconds for interfaces
+  pause:
+    seconds: 20
+
 # - name: Set eth[1-9] MTU to 9238
 #   shell: |
 #     for i in $(ip link | grep eth[1-9] | awk -F':' '{print $2}'); do
