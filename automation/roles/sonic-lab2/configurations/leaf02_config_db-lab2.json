@@ -301,8 +301,8 @@
         }
     },
     "VLAN": {
-        "Vlan10": {
-            "vlanid": "10"
+        "Vlan20": {
+            "vlanid": "20"
         }
     },
     "VLAN_INTERFACE": {
