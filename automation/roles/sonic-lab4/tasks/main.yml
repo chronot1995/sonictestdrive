@@ -39,6 +39,10 @@
 - name: Restart the services in the BGP Container
   shell: docker kill --signal=HUP bgp
 
+- name: Pause for 30 seconds for BGP container
+  pause:
+    seconds: 30
+
 - name: Clear all the BGP Sessions
   shell: vtysh -c "clear ip bgp *"
 
