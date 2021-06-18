@@ -26,12 +26,6 @@
   copy: src=./configurations/{{inventory_hostname}}_config_db.json dest=/etc/sonic/config_db.json
   notify: reload sonic config
 
-- name: Copy FRR config to BGP Container
-  shell: docker cp ./configurations/{{inventory_hostname}}_bgpd.conf bgp:/etc/frr/bgpd.conf
-
-- name: Restart the services in the BGP Container
-  shell: docker kill --signal=HUP bgp
-
 # - name: Set eth[1-9] MTU to 9238
 #   shell: |
 #     for i in $(ip link | grep eth[1-9] | awk -F':' '{print $2}'); do

@@ -23,16 +23,16 @@
     group: cumulus
 
 - name: Restore config_db
-  copy: src=./configurations/{{inventory_hostname}}_config_db.json dest=/etc/sonic/config_db.json
+  copy: src=./configurations/{{inventory_hostname}}_config_db-lab3.json dest=/etc/sonic/config_db.json
   notify: reload sonic config
 
 - name: Copy FRR config to temp directory
   ansible.builtin.copy:
-    src: configurations/{{inventory_hostname}}_bgpd.conf
-    dest: /var/tmp/bgpd.conf
+    src: configurations/{{inventory_hostname}}_bgpd-lab3.conf
+    dest: /var/tmp/lab3-bgpd.conf
 
 - name: Copy FRR config from temp to BGP Container
-  shell: docker cp /var/tmp/bgpd.conf bgp:/etc/frr/bgpd.conf
+  shell: docker cp /var/tmp/lab3-bgpd.conf bgp:/etc/frr/bgpd.conf
 
 - name: Restart the services in the BGP Container
   shell: docker kill --signal=HUP bgp

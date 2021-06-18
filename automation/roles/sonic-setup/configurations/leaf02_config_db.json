@@ -281,7 +281,7 @@
             "admin_status": "up",
             "alias": "fortyGigE0/16",
             "index": "4",
-            "lanes": "45,46,47,48",
+            "lanes": "41,42,43,44",
             "mtu": "9100",
             "speed": "40000"
         }

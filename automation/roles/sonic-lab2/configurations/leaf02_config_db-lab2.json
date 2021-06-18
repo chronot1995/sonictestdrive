@@ -65,11 +65,11 @@
     },
     "DEVICE_METADATA": {
         "localhost": {
-            "bgp_asn": "65101",
+            "bgp_asn": "65102",
             "buffer_model": "traditional",
             "default_bgp_status": "up",
             "default_pfcwd_status": "disable",
-            "hostname": "leaf01",
+            "hostname": "leaf02",
             "hwsku": "Force10-S6000",
             "mac": "52:54:00:12:34:56",
             "platform": "x86_64-kvm_x86_64-r0",
@@ -229,7 +229,9 @@
     },
     "INTERFACE": {
         "Ethernet0": {},
-        "Ethernet4": {}
+        "Ethernet12": {},
+        "Ethernet4": {},
+        "Ethernet8": {}
     },
     "KDUMP": {
         "config": {
@@ -257,6 +259,30 @@
             "lanes": "29,30,31,32",
             "mtu": "9100",
             "speed": "40000"
+        },
+        "Ethernet8": {
+            "admin_status": "up",
+            "alias": "fortyGigE0/8",
+            "index": "2",
+            "lanes": "33,34,35,36",
+            "mtu": "9100",
+            "speed": "40000"
+        },
+        "Ethernet12": {
+            "admin_status": "up",
+            "alias": "fortyGigE0/12",
+            "index": "3",
+            "lanes": "37,38,39,40",
+            "mtu": "9100",
+            "speed": "40000"
+        },
+        "Ethernet16": {
+            "admin_status": "up",
+            "alias": "fortyGigE0/16",
+            "index": "4",
+            "lanes": "41,42,43,44",
+            "mtu": "9100",
+            "speed": "40000"
         }
     },
     "SNMP": {
@@ -280,8 +306,8 @@
         }
     },
     "VLAN_INTERFACE": {
-        "Vlan10": {},
-        "Vlan10|10.0.10.1/24": {}
+        "Vlan20": {},
+        "Vlan20|10.0.20.1/24": {}
     },
     "VLAN_MEMBER": {
         "Vlan10|Ethernet0": {
