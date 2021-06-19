@@ -1,0 +1,26 @@
+# - hosts: server03
+#   become: true
+#   roles:
+#     - servers
+
+# - hosts: servers,oobserver
+#   become: true
+#   roles:
+#     - netq-servers
+
+- hosts: sonicbonus,leaf02
+  become: true
+  roles:
+    - sonic-lab4
+#     - netq-sonic
+
+# - hosts: sonicswitches
+#   become: true
+#   roles:
+#     - netq-sonic
+
+- hosts: cumulusswitches
+  become: true
+  roles:
+    - cumulus-lab4
+#     - netq-cumulus

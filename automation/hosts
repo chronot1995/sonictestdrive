@@ -3,14 +3,24 @@
 #    https://github.com/cumulusnetworks/topology_converter
 #    using topology data
 
-[switches]
+[sonicswitches]
 leaf01 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
 leaf02 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
 spine01 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
 
+[sonicbonus]
+spine02 ansible_user=admin ansible_ssh_pass=YourPaSsWoRd
+
+[cumulusswitches]
+leaf03
+
+[oobserver]
+oob-mgmt-server
+
 [servers]
 server01
 server02
+server03
 
 [all:vars]
 ansible_user=cumulus

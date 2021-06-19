@@ -1,0 +1,67 @@
+- name: Create cumulus user
+  ansible.builtin.user:
+    name: cumulus
+    comment: Cumulus User
+    shell: /bin/bash
+    groups: sudo,docker,admin,redis
+    #    password_expire_max: 9999
+    password: "$6$K/4TLDKmKbK2n$3q7ntb71hclIlr4wggRGp8l5YfIe2fSID98a3nLyxeH5Ple./mfGJL2B2d8JEPkCiQaF3p5Kr2LtcoeOAr/Gt."
+
+- name: Create an ssh directory if it does not exist
+  ansible.builtin.file:
+    path: /home/cumulus/.ssh
+    state: directory
+    owner: cumulus
+    group: cumulus
+
+- name: Download cumulus User Key
+  get_url:
+    url: http://192.168.200.1/authorized_keys
+    dest: /home/cumulus/.ssh/authorized_keys
+    owner: cumulus
+    group: cumulus
+
+- name: Restore config_db
+  copy: src=./configurations/{{inventory_hostname}}_config_db-lab4.json dest=/etc/sonic/config_db.json
+  notify: reload sonic config
+
+- name: Flush Handlers, best practice
+  meta: flush_handlers
+
+- name: Copy FRR config to temp directory
+  ansible.builtin.copy:
+    src: configurations/{{inventory_hostname}}_bgpd-lab4.conf
+    dest: /var/tmp/lab4-bgpd.conf
+
+- name: Copy FRR config from temp to BGP Container
+  shell: docker cp /var/tmp/lab4-bgpd.conf bgp:/etc/frr/bgpd.conf
+
+- name: Restart the services in the BGP Container
+  shell: docker kill --signal=HUP bgp
+
+- name: Pause for 30 seconds for BGP container
+  pause:
+    seconds: 30
+
+- name: Clear all the BGP Sessions
+  shell: vtysh -c "clear ip bgp *"
+
+# - name: Set eth[1-9] MTU to 9238
+#   shell: |
+#     for i in $(ip link | grep eth[1-9] | awk -F':' '{print $2}'); do
+#       ip link set mtu 9238 $i
+#     done
+#   args:
+#     executable: /bin/bash
+
+# - name: Check for ebtables.filter
+#   stat: path=/etc/ebtables.filter
+#   register: ebtables_stat
+
+# - name: Disable default ebtables DROP rules
+#   command: mv /etc/ebtables.filter /etc/ebtables.filter.disabled
+#   when: ebtables_stat.stat.exists
+#   notify: flush ebtables
+
+- name: Flush Handlers, best practice
+  meta: flush_handlers

@@ -1,0 +1,4 @@
+- hosts: sonicswitches
+  become: true
+  roles:
+    - sonic-lab2
