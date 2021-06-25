@@ -10,6 +10,7 @@
 
 - hosts: sonicbonus,leaf02
   become: true
+  gather_facts: no
   roles:
     - sonic-lab4
 #     - netq-sonic
@@ -21,6 +22,7 @@
 
 - hosts: cumulusswitches
   become: true
+  gather_facts: no
   roles:
     - cumulus-lab4
 #     - netq-cumulus

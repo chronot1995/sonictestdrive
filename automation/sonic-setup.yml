@@ -1,9 +1,11 @@
 - hosts: servers
   become: true
+  gather_facts: no
   roles:
     - servers
 
 - hosts: sonicswitches
   become: true
+  gather_facts: no
   roles:
     - sonic-setup
