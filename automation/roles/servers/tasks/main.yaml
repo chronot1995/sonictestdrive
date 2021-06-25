@@ -1,9 +1,9 @@
-- name: Verify Minimum Software Version - Ubuntu 18.04
-  assert:
-    that: "{{ansible_lsb.release is version_compare('18.04', '>=') }}"
-    msg: >
-      "Ubuntu must be version 18.04.
-      Version {{ansible_lsb.release}} detected"
+# - name: Verify Minimum Software Version - Ubuntu 18.04
+#   assert:
+#     that: "{{ansible_lsb.release is version_compare('18.04', '>=') }}"
+#     msg: >
+#       "Ubuntu must be version 18.04.
+#       Version {{ansible_lsb.release}} detected"
 
 - name: Run the equivalent of "apt-get update"
   apt:
